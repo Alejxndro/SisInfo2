@@ -6,7 +6,7 @@ package userstories;
 
 /**
  *
- * @author Alejandro
+ * @author edu
  */
 public class UserStories {
 
