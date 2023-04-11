@@ -36,7 +36,7 @@ public class Lista extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        importar = new javax.swing.JButton();
         id = new javax.swing.JTextField();
         NomProyecto = new javax.swing.JTextField();
         Rol = new javax.swing.JTextField();
@@ -69,7 +69,12 @@ public class Lista extends javax.swing.JFrame {
 
         jButton4.setText("Editar");
 
-        jButton5.setText("Importar");
+        importar.setText("Importar");
+        importar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                importarActionPerformed(evt);
+            }
+        });
 
         id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +98,7 @@ public class Lista extends javax.swing.JFrame {
                                 .addGap(116, 116, 116)
                                 .addComponent(jButton4)
                                 .addGap(347, 347, 347)
-                                .addComponent(jButton5)
+                                .addComponent(importar)
                                 .addGap(62, 62, 62))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,7 +143,7 @@ public class Lista extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
                             .addComponent(jButton4)
-                            .addComponent(jButton5))))
+                            .addComponent(importar))))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -170,6 +175,14 @@ public class Lista extends javax.swing.JFrame {
     private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idActionPerformed
+
+    private void importarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importarActionPerformed
+        // TODO add your handling code here:
+        Ver newframe= new Ver();
+        newframe.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_importarActionPerformed
 
     public static void main(String args[]) {
        
@@ -219,11 +232,11 @@ public class Lista extends javax.swing.JFrame {
     private javax.swing.JTable Tabla1;
     private javax.swing.JTextField Talque;
     private javax.swing.JTextField id;
+    private javax.swing.JButton importar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

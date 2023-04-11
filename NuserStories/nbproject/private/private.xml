@@ -3,9 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/USUARIO/GitHub/SisInfo2/NuserStories/src/IU/Lista.java</file>
             <file>file:/C:/Users/USUARIO/GitHub/SisInfo2/NuserStories/src/dba/MySQL.java</file>
             <file>file:/C:/Users/USUARIO/GitHub/SisInfo2/NuserStories/src/IU/Begin.java</file>
+=======
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/Lista.java</file>
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/Begin.java</file>
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/Sinonimos.java</file>
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/Ver.java</file>
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/BuscadorSinonimos.java</file>
+            <file>file:/D:/GitSisInfo2/SI2/SisInfo2/NuserStories/src/IU/VentanaVer.java</file>
+>>>>>>> b30dd1ee1d11000d45d57805c4f38fbbad4ac2be
         </group>
     </open-files>
 </project-private>
