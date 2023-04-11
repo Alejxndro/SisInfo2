@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
 import dba.MySQL;
 import javax.swing.JOptionPane;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Lista extends javax.swing.JFrame {
     
@@ -36,7 +38,7 @@ public class Lista extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         id = new javax.swing.JTextField();
-        NombreProyecto = new javax.swing.JTextField();
+        NomProyecto = new javax.swing.JTextField();
         Rol = new javax.swing.JTextField();
         Requerimento = new javax.swing.JTextField();
         Talque = new javax.swing.JTextField();
@@ -96,7 +98,7 @@ public class Lista extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(34, 34, 34)
-                                .addComponent(NombreProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(NomProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(303, 303, 303)))
                         .addComponent(jButton2))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -123,7 +125,7 @@ public class Lista extends javax.swing.JFrame {
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NombreProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(NomProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(31, 31, 31)
                         .addComponent(Rol, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -150,14 +152,14 @@ public class Lista extends javax.swing.JFrame {
            
        }else{
            idc = Integer.parseInt((String) Tabla1.getValueAt(fila,0).toString());
-           String NomProyecto = (String) Tabla1.getValueAt(fila, 1);
+           String NombProyecto = (String) Tabla1.getValueAt(fila, 1);
            String rol = (String) Tabla1.getValueAt(fila, 2);
            String requerimento = (String) Tabla1.getValueAt(fila, 3);
            String talque = (String) Tabla1.getValueAt(fila, 4);
            String condiciones = (String) Tabla1.getValueAt(fila, 5);
            
            id.setText(""+idc+"");
-           NombreProyecto.setText(NomProyecto);
+           NomProyecto.setText(NombProyecto);
            Rol.setText(rol);
            Requerimento.setText(requerimento);
            Talque.setText(talque);
@@ -194,10 +196,11 @@ public class Lista extends javax.swing.JFrame {
                 userstorie[0] = rs.getInt("id");
                 userstorie[1] = rs.getString("NomProyecto");
                 userstorie[2] = rs.getString("rol");
-                userstorie[3] = rs.getString("requerimento");
+                userstorie[3] = rs.getString("requerimiento");
                 userstorie[4] = rs.getString("talque");
                 userstorie[5] = rs.getString("condiciones");
-                modelo.addRow(userstorie);
+                
+                modelo.addRow( userstorie);
             }
             Tabla1.setModel(modelo);
         
@@ -210,7 +213,7 @@ public class Lista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Condiciones;
-    private javax.swing.JTextField NombreProyecto;
+    private javax.swing.JTextField NomProyecto;
     private javax.swing.JTextField Requerimento;
     private javax.swing.JTextField Rol;
     private javax.swing.JTable Tabla1;
